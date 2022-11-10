@@ -11,7 +11,7 @@ mltoken = token_response.json()["access_token"]
 
 header = {'Content-Type': 'application/json', 'Authorization': 'Bearer ' + mltoken}
 app = Flask(__name__)
-model = joblib.load('Power_Prediction.sav')
+# model = joblib.load('Power_Prediction.sav')
 @app.route('/')
 def home():
     return render_template('intro.html')
