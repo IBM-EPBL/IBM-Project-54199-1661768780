@@ -4,7 +4,7 @@ import joblib
 import requests
 
 
-# NOTE: you must manually set API_KEY below using information retrieved from your IBM Cloud account.
+# IBM Cloud Integration with Credentials
 API_KEY = "S0ahhsqevpUY0Eu1YKv5Kyl38OMCy3haa5WCXw0am_wL"
 token_response = requests.post('https://iam.cloud.ibm.com/identity/token', data={"apikey": API_KEY, "grant_type": 'urn:ibm:params:oauth:grant-type:apikey'})
 mltoken = token_response.json()["access_token"]
