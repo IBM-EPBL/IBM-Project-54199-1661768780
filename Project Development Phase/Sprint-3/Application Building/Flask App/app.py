@@ -35,7 +35,7 @@ def y_predict():
     For rendering results on HTML GUI
     '''
     x_test = [[float(x) for x in request.form.values()]]
-    prediction = model.ppredict(x_test)
+    prediction = model.predict(x_test)
     print(prediction)
     output = prediction[0]
     return render_template('predict.html', prediction_text='The energy predicted is {:.2f} KWh'.format(output))
